@@ -1,15 +1,13 @@
 class AjaxRequester {
     getCityId(cityName) {
-        $.ajax({
+        return $.ajax({
             type: 'GET',
             beforeSend: function(request) {
                 request.setRequestHeader('user-key', 'ce008e4a701de9bdddcd308959a440f5')
             },
-            url: `https://developers.zomato.com/api/v2.1/cities?q=${cityName}`,
-            success: (data) => {
-                return data.location_suggestions[0].id
-            }
+            url: `https://developers.zomato.com/api/v2.1/cities?q=${cityName}`
         })
+        .catch((err)=> {throw err})
     }
     searchRestaurants(cityID, cuisineID) {
         return $.ajax({
@@ -19,15 +17,16 @@ class AjaxRequester {
             },
             url: `https://developers.zomato.com/api/v2.1/search?entity_id=${cityID}&entity_type=city&count=8&cuisines=${cuisineID}&sort=rating&order=desc`
         })
+        .catch((err)=> {throw err})
     }
 
-    addRestaurantsToServer(restaurantData) {
-
+    addRestaurantsToDB(restaurantData) {
         return $.ajax ({
             type: 'POST',
             url: 'recommendations',
-            data: {restData: restaurantData}
+            data: {restaurantData: JSON.stringify(restaurantData)}
         })
+        .catch((err)=> {throw err})
     }
 }
 export default AjaxRequester

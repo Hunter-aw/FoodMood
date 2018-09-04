@@ -7,6 +7,7 @@ class Restaurant {
         this.ratingColor = singleRestData.user_rating.rating_color 
         this.image = singleRestData.featured_image
         this.menuUrl = singleRestData.menu_url
+        this.id = singleRestData.id
     }
 }
 
@@ -15,9 +16,9 @@ class RestRecs {
         this.allRestData = allRestData.restaurants
         this.restArray = []
     }
-    createRestArray (restData) {
-        for (rest in restData) {
-            let newRest = new Restaurant (rest)
+    createRestArray () {
+        for (let rest of this.allRestData) {
+            let newRest = new Restaurant (rest.restaurant)
             this.restArray.push(newRest)
         }
     } 
