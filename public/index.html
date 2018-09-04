@@ -11,17 +11,31 @@
 </head>
 
 <body>
-    <div class="container-full">
-        <div class="searchCuisines">
-            <div class="input-group mb-3">
-                <form class="input-group-prepend">
-                    <input type="text" class="cityName form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
-                    <button id= "addCity" class="btn btn-primary" type="button">Add City</button>
-                </form>
+    <nav class="navbar navbar-fixed-top navbar-dark bg-dark">
+        <div class="container">
+            <button type="button" class="btn btn-dark navbar-btn text-left">About Us</button>
+            <button type="button" class="btn btn-dark navbar-btn text-left">FoodMood 4 Life</button>
+            <button type="button" class="btn btn-dark navbar-btn text-left">Support FoodMood</button>
+            <button type="button" class="btn btn-dark navbar-btn text-left">Sign in</button>
+        </div>
+    </nav>
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Food Mood</div>
+                <div class="intro-heading">Are you in the Mood?</div>
+                <div class="input-group searchCuisines">
+                    <form class="input-group-prepend" type="form">
+                        <input type="text" class="cityName form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                        <button id= "addCity" class="btn btn-primary" type="button">Add City</button>
+                    </form>
+                </div>
             </div>
         </div>
+    </header>
+    <div class="container cuisines-container">
         <div class="row">
-            <div class="cuisines"></div>
+            <div class="col-12 text-center cuisines">
         </div>
     </div>
 
