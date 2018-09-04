@@ -40,13 +40,19 @@
     </div>
 
     <script id="cuisines-template" type="text/x-handlebars-template">
-        <div class="cuisine" data-id ={{cuisine_id}}>
+        <div class="cuisine" data-id ={{id}}>
             <h4>{{cuisine_name}}</h4>
         </div>
     </script>
     <script id="rest-template" type="text/x-handlebars-template">
-        {{#each recArray}}
-        <div class = "restaurants" data-id ={{id}}>
+
+        {{#each restaurants}}
+        <div class = "restaurants col-sm-5" data-id ={{id}} style="background-image: url({{image}});zoom: 100%;">
+            <h1 class="res-h1">{{name}}</h1>
+            <!-- <img src="{{image}}"style="max-width","100px"> -->
+            <p>avg price(2) - {{averageCostForTwo}}</p>
+            <p>rating: {{userRating}}</p>
+        
         </div>
         {{/each}}
     </script>

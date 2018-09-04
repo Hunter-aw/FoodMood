@@ -4,11 +4,11 @@ class eventsHandler {
         this.render = render;
         this.$city = $(".city")
         this.$cuisines = $(".cuisines");
-        this.array = [{cuisine_id: 1, cuisine_name: "American"},
-                      {cuisine_id: 25, cuisine_name: "Chinese"},
-                      {cuisine_id: 73, cuisine_name: "Mexican"},
-                      {cuisine_id: 55, cuisine_name: "Italian"}
-                    ]
+        this.array =  [
+        {id:25,cuisine_name: "Chinese"},
+        {id:73,cuisine_name: "Mexican"},
+        {id:55,cuisine_name: "Italian"}
+      ]
     }
     showCuisinesforCity() {
         $('#addCity').on('click', () => {
@@ -26,13 +26,17 @@ class eventsHandler {
 
     chooseCuisine() {
         $('.cuisines').on('click', '.cuisine', () => {
-            let cuisineId = $('.cuisine').data().id
-            this.repository.addCuisineId(cuisineId)
+            let cuisineId = $('.cuisine').data().id;
+            this.repository.addCuisineId(cuisineId);
             this.repository.getRestauantRecs()
             .then((data) => {
-                console.log(data)
-                this.render.renderRestRecs(data)})
+                this.repository.addRestaurants(data);
+                console.log(this.repository.restaurants)
+                this.render.renderRestRecs(this.repository.restaurants);
+            })
         })
     }
+  
+
 }
 export default eventsHandler;

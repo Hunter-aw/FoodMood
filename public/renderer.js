@@ -16,8 +16,8 @@ class renderer {
     renderRestRecs(restaurants) {
         this.$cuisines.empty();
         let template = Handlebars.compile(this.$restTemplate);
-        let newHTML = template(restaurants)
-        this.$cuisines.append(newHTML)
+        let newHTML = template({restaurants});
+        this.$cuisines.append(newHTML);
     }
 
 }

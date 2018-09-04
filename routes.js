@@ -10,7 +10,7 @@ router.post('/recommendations', (req, res) => {
     let newRecs = new Restaurants({
         recArray: []
     });
-    newRecs.recArray.push(req.body.restaurantData)
+    newRecs.recArray.push(JSON.parse(req.body.restaurantData))
     newRecs.save()
     console.log(newRecs.recArray)
     res.send(newRecs.recArray)
