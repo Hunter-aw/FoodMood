@@ -1,4 +1,5 @@
 const express = require('express')
+const app = express()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const server = require('http').createServer(app);
@@ -9,8 +10,8 @@ mongoose.connect(process.env.CONNECTION_STRING || 'mongodb://localhost/spacebook
   console.log("DB connection established!!!");
 })
 
-const app = express()
-const socket = io()
+
+// const socket = io();
 
 
 

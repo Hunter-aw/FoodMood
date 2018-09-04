@@ -7,7 +7,7 @@ class eventsHandler {
         this.array = [{name:"guy",age:22},{name:"alon",age:30},{name:"tomer",age:40},{name:"tomer",age:40},{name:"tomer",age:40}];
     }
     showCuisines() {
-        $('.serachCuisines').on('click', () => {
+        $('.displayCuisines').on('click', () => {
             let $input = $('.cityName');
             if ($input.val() === "") {
                 alert("Please enter text!");

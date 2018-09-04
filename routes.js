@@ -12,3 +12,4 @@ router.post('/recommendations', (req, res) => {
     newRecs.save()
     res.send(newRecs)
 })
+module.exports = router;
