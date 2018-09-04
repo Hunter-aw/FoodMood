@@ -1,19 +1,71 @@
+body {
+    background-color: #343a40
+}
 .row{
     width: 80%;
     margin-right: 10%;
     float: right;
 }
 .cuisines{
-    width: 100%;
+    width: 100%;    
+    padding-top: 100px;
+    padding-bottom: 200px;
+    text-align: center;
+
 }
 .cuisine{
-padding-bottom: 10px;
-width: 60%;
-margin-right:5%;
-margin-left: 5%;
-display: inline-block;
-border: 1px solid black
+    width: 30%;
+    margin-right:5%;
+    margin-left: 5%;
+    display: inline-block;
+    border: 1px solid white;
+    background-color: rgb(93, 136, 102);
+    color: white;
+    border-radius: 5px;
+    height: 100px;
+    margin-bottom: 40px;
+    vertical-align: middle;
+    width: 60%;
+    padding-bottom: 10px;
 }
+header {
+    background-image: url('./robin-stickel-82145-unsplash.jpg');
+    background-repeat: none;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+  }
+  .intro-text {
+    padding-top: 190px;
+    padding-bottom: 300px;
+    text-align: center;
+  }
+  
+  .intro-lead-in {
+    font-family: "Droid Serif", "Helvetica Neue", sans-serif;
+    font-style: italic;
+    font-size: 100px;
+    line-height: 40px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .intro-heading {
+      font-size: 40px;
+  }
+  .searchCuisines{
+      text-align: center;
+      margin-left: 35%;
+      margin-top: 50px
+  }
+
+  .cuisines-container {
+
+    background-repeat: none;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+  }
 @media only screen and (max-width: 600px) {
     .cuisine {
         width: 100%;
