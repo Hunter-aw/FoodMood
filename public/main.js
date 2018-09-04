@@ -1,9 +1,13 @@
 import host from './repository.js';
 import renderer from './renderer.js';
 import eventsHandler from './event_handler.js';
-const repository = new host();
+import AjaxRequester from './ajax_requester.js';
 const render = new renderer();
+const ajaxRequester = new AjaxRequester();
+const repository = new host(ajaxRequester);
 const eventHandler = new eventsHandler(repository,render);
 
-eventHandler.showCuisines()
+
+eventHandler.showCuisinesforCity()
+eventHandler.chooseCuisine()
 

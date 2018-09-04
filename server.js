@@ -6,7 +6,7 @@ const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 const api = require('./routes')
 
-mongoose.connect(process.env.CONNECTION_STRING || 'mongodb://localhost/spacebookDB', function() {
+mongoose.connect(process.env.CONNECTION_STRING || 'mongodb://localhost/foodmoood', function() {
   console.log("DB connection established!!!");
 })
 
