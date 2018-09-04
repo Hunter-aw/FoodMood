@@ -1,7 +1,7 @@
 class host{
     constructor(ajaxRequest){
         this.cuisines = []
-        // this.ajax = ajaxRequest
+        this.ajax = ajaxRequest
     }
     addCuisines(array){
         for(let x in array){

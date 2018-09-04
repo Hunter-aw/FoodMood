@@ -2,6 +2,7 @@ class eventsHandler {
     constructor(repository, render) {
         this.repository = repository;
         this.render = render;
+        this.$city = $(".city")
         this.$cuisines = $(".cuisines");
         this.array = [{name:"guy",age:22},{name:"alon",age:30},{name:"tomer",age:40},{name:"tomer",age:40},{name:"tomer",age:40}];
     }
