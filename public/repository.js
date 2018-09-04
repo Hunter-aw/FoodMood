@@ -3,10 +3,11 @@ import RestRecs from './restClass.js'
 class host{
     constructor(ajaxRequester){
         this.cuisines = []
+        this.restaurants = []
         this.ajax = ajaxRequester
         this.city = ""
-        this.cityId = 0
-        this.cuisineId = 0
+        this.cityId;
+        this.cuisineId = 0;
     }
     addCity(city){
         this.city = city
@@ -22,14 +23,20 @@ class host{
     }
     addCuisineId(selectedCuisine) {
         this.cuisineId = selectedCuisine
+        console.log(this.cuisineId)
+    }
+    addRestaurants(array){
+        for(let x in array){
+            this.restaurants.push(array[x]);
+        }
     }
     getRestauantRecs() {
         return this.ajax.searchRestaurants(this.cityId, this.cuisineId)
         .then((data) => {
             let restData = new RestRecs(data)
             restData.createRestArray()
-            console.log(restData.restArray)
-            this.ajax.addRestaurantsToDB(restData.restArray)
+            this.ajax.addRestaurantsToDB(restData.restArray);
+            return restData.restArray
         })
     }
 }
