@@ -1,0 +1,19 @@
+.row{
+    width: 80%;
+    margin-right: 10%;
+    float: right;
+}
+.cuisines{
+    width: 100%;
+}
+.cuisine{
+width: 30%;
+margin-right:5%;
+margin-left: 5%;
+display: inline-block;
+}
+@media only screen and (max-width: 600px) {
+    .cuisine {
+        width: 100%;
+        }
+}
