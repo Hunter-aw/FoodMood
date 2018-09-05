@@ -30,13 +30,14 @@ class eventsHandler {
         .then((data) => {
             this.repository.addRestaurants(data);
             console.log(this.repository.restaurants)
-            this.render.renderRestRecs(this.repository.restaurants);
+            // this.render.renderRestRecs(this.repository.restaurants);
         })
     }
 
     searchCuisines(){
         $('.cuisines').on('click', '#addCuisine', (()=>{
         let cuisineName = $('.cuisineName').val()
+        this.render.hostLoadingPage()
         this.repository.searchCuisine(cuisineName)
         .then(() => this.getRestaurantsbyCuisine())
         }))
@@ -47,9 +48,15 @@ class eventsHandler {
             let cuisineId = $(event.currentTarget).data().id;
             console.log(this)
             this.repository.addCuisineId(cuisineId);
+            this.render.hostLoadingPage()
             this.getRestaurantsbyCuisine()
             })
         }
+    hostRestaurantRender() {
+        $('.cuisines').on('click', '.voteNow', () => {
+            this.render.renderRestRecs(this.repository.restaurants);
+        })
+    }
     searchAgain() {
         $('.cuisines').on('click', '.search-again', () => {
             this.repository.refreshPage()
