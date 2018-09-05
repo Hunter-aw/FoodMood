@@ -1,8 +1,8 @@
 var mongoose = require('mongoose');
 
 let cuisineSchema = new mongoose.Schema({
-    name: String,
-    id:Number
+    cuisine_name: String,
+    cuisine_id:Number
 });
 
 
