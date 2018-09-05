@@ -153,6 +153,7 @@ img {
 .res-h1 {
     color: white;
     background: rgba(52, 58, 64, 0.5);
+    height: 100px
 }
 .space-waster{
     padding-bottom: 150px
