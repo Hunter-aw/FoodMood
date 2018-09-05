@@ -8,6 +8,7 @@ class Restaurant {
         this.image = singleRestData.featured_image
         this.menuUrl = singleRestData.menu_url
         this.id = singleRestData.id
+        this.currency = singleRestData.currency
     }
 }
 
