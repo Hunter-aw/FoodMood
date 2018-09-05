@@ -12,6 +12,7 @@ router.post('/recommendations', (req, res) => {
         recArray: []
     });
     newRecs.recArray.push(JSON.parse(req.body.restaurantData))
+    Restaurants.remove({});
     newRecs.save()
     console.log(newRecs.recArray)
     res.send(newRecs)
@@ -24,5 +25,12 @@ router.get('/test/:cuisine',(req,res)=>{
         else{res.send(data)};
     }))
 })
+router.get('/getRestaurants',function(req,res){
+    Restaurants.findOne({},function(err,data){
+        if(err){res.send(err)}
+        else{res.send(data)}
+    })
+})
+
 
 module.exports = router;

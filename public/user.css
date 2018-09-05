@@ -1,0 +1,42 @@
+body{
+    background-color: white;
+}
+.names-area{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    top: 40%;
+    border: 1px solid black;
+}
+.boxName{
+    width: fit-content;
+    height: 50px;
+    background: #e00;
+    border-radius: 10px;
+    position: relative;
+  }
+  .alert{
+      font-size: 25px;
+      color:red;
+      display: none;
+  }
+  .restaurants {
+    /* border: 1px solid black; */
+    margin-bottom: 20px;
+    display: inline-block;
+    margin-right: 20px;
+    border-radius: 25px;
+    width: 50%;
+  }
+  .res-h1 {
+    color: white;
+    background: rgba(52, 58, 64, 0.5);
+}
+.space-waster{
+    padding-bottom: 150px
+}
+.rest-info {
+    color: white;
+    background: rgba(52, 58, 64, 0.5);
+}
+
