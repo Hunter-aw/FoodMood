@@ -1,6 +1,18 @@
 body {
     background-color: #343a40;
 }
+.names{
+    position: relative;
+    left: 0;
+   
+}
+.name{
+    width: fit-content;
+    height: 50px;
+    background: #e00;
+    border-radius: 10px;
+    position: relative;
+  }
 
 .row {
     width: 80%;
@@ -10,7 +22,7 @@ body {
 .cuisines {
     width: 100%;
     padding-top: 50px;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
     padding-left: 30px;
     text-align: center;
 }
