@@ -6,8 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css">
     <link href="style.css" rel="stylesheet">
-    <title>FoodMood</title>
+    <title>FoodMoood</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <script>
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+    </script>
 </head>
 
 <body>
@@ -24,8 +33,8 @@
             <div class="intro-text">
                 <div class="intro-lead-in">Food Mood</div>
                 <div class="intro-heading">Are you in the Mood?</div>
-                <div class="input-group searchCuisines">
-                    <form class="input-group-prepend" type="form">
+                <div class="row input-group searchCuisines align-items-center">
+                    <form class="input-group-prepend col-md-4 offset-md-2" type="form">
                         <input type="text" class="cityName form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
                         <button id= "addCity" class="btn btn-primary" type="button">Add City</button>
                     </form>
@@ -37,6 +46,7 @@
         </div>
     </header>
     <div class="container cuisines-container ">
+        <div class="se-pre-con"></div>
         <div class="row cuisines text-center align-center">
         </div>
     </div>
@@ -69,8 +79,8 @@
                 <h1 class="res-h1">{{name}}</h1>
                 <div class="space-waster"></div>
             <div class = "rest-info">       
-                <h4>avg price(2) - {{averageCostForTwo}}</h4>
-                <h4>rating: {{userRating}}</h4>
+                <h4>avg price(2) - {{currency}}{{averageCostForTwo}}</h4>
+                <h4>rating: <i class="fas fa-star">{{userRating}}</i></h4>
             </div>
         </div>
         {{/each}}

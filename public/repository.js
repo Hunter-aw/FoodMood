@@ -45,6 +45,9 @@ class host{
             return restData.restArray
         })
     }
+    refreshPage() {
+        this.ajax.refreshAjaxPage()
+    }
 }
 
 export default host

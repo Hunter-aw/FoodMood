@@ -35,5 +35,10 @@ class AjaxRequester {
         })
         .catch((err)=>{throw err})
     }
+    refreshAjaxPage() {
+        $ajax({
+            
+        })
+    }
 }
 export default AjaxRequester
