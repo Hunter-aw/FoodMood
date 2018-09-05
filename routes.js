@@ -17,9 +17,11 @@ router.post('/recommendations', (req, res) => {
     res.send(newRecs.recArray)
 })
 
-router.get('/test',(req,res)=>{
-    Cuisine.findOne({cuisine_name:"Afghani"},function(err,data){
-        res.send(data);
-})
+router.get('/test/:cuisine',(req,res)=>{
+    let cuisineName = req.params.cuisine;
+    Cuisine.findOne({cuisine_name:cuisineName},((err,data)=>{
+        if(err){res.send(err)}
+        else{res.send(data)};
+    }))
 })
 module.exports = router;

@@ -7,7 +7,7 @@ class host{
         this.ajax = ajaxRequester
         this.city = ""
         this.cityId;
-        this.cuisineId = 0;
+        this.cuisineId;
     }
     addCity(city){
         this.city = city
@@ -31,9 +31,9 @@ class host{
             this.restaurants.push(array[x]);
         }
     }
-    searchCuisine(){
-        this.ajax.searchCuisine().then((data)=>{
-            console.log(data.cuisine_id);
+    searchCuisine(name){
+        this.ajax.fetchCuisineByName(name).then((data)=>{
+           this.cuisineId =(data.cuisine_id);
         })
     }
     getRestauantRecs() {

@@ -24,9 +24,10 @@ class eventsHandler {
             }
         });
     }
-    searchCuisine(){
+    searchCuisines(){
         $('#addCuisine').on('click',(()=>{
-            this.repository.searchCuisine();
+        let cuisineName = $('.cuisineName').val()
+            this.repository.searchCuisine(cuisineName);
         }))
     }
     chooseCuisine() {

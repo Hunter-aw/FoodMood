@@ -28,10 +28,10 @@ class AjaxRequester {
         })
         .catch((err)=> {throw err})
     }
-    searchCuisine(){
+    fetchCuisineByName(name){
         return $.ajax({
             type:'GET',
-            url:'test'
+            url:'test/'+name,
         })
         .catch((err)=>{throw err})
     }
