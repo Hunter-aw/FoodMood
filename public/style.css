@@ -112,11 +112,11 @@ header {
 
 .header-pre {
     transition: all 2s ease;
-    height: auto
+    height: 700px;
 }
 
 .intro-text {
-    padding-top: 190px;
+    padding-top: 100px;
     padding-bottom: 300px;
     text-align: center;
 }
@@ -177,6 +177,7 @@ img {
 
 .transform-active {
     height: 50px;
+    padding-bottom: 50px
 }
 
 .no-js #loader { display: none;  }
@@ -208,4 +209,3 @@ img {
         background-color: rgb(156, 97, 204);
     }
 }
-
