@@ -6,12 +6,11 @@ class renderer {
     }
     rendercuisines(array){
         this.$cuisines.empty();
+        let cuisineObj = {cuisines:array}
         let template = Handlebars.compile(this.$cuisinesTemplate);
-        for (let x in array) {
-          let newHTML = template(array[x]);
-          console.log(newHTML);
-          this.$cuisines.append(newHTML);
-        }
+        let newHTML = template(cuisineObj);
+        console.log(newHTML);
+        this.$cuisines.append(newHTML);
     }
     renderRestRecs(restaurants) {
         this.$cuisines.empty();

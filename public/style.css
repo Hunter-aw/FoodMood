@@ -1,18 +1,20 @@
 body {
     background-color: #343a40
 }
-.row{
+
+.row {
     width: 80%;
     float: right;
 }
-.cuisines{
-    width: 100%;    
-    padding-top: 100px;
+
+.cuisines {
+    width: 100%;
+    padding-top: 50px;
     padding-bottom: 200px;
     text-align: center;
-
 }
-.cuisine{
+
+.cuisine {
     margin-left: 5%;
     display: inline-block;
     border: 1px solid white;
@@ -25,17 +27,64 @@ body {
     vertical-align: middle;
     width: 60%;
     padding-bottom: 10px;
-    animation: multicolor 6s ease infinite alternate none;
+    animation: multicolor 6s ease infinite alternate backwards;
+    cursor: pointer;
 }
-.chosen-city{
+.searchCuisines {
+    text-align: center;
+    margin-left: 35%;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.cuisineNameDisplay{
+    font-size: 50px
+}
+.chooseCuisine{
+    text-align: center;
+    font-display: bold;
+    color: white;
+    margin-left: 10%;
+    padding-bottom: 25px
+}
+
+.cuisines-container {
+    background-repeat: none;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    padding-left: 60px
+}
+
+[data-id="25"] {
+    animation-delay: 3s
+}
+
+[data-id="73"] {
+    animation-delay: 0s;
+    animation-duration: 5s
+}
+
+[data-id="55"] {
+    animation-delay: 0s;
+    animation-duration: 7s
+}
+[data-id="959"] {
+    animation-delay: 2s;
+    animation-duration: 4s
+}
+
+.chosen-city {
     display: none
 }
-.city-text{
+
+.city-text {
     padding: 0;
     font-size: 40px;
-    color: black;
-    text-emphasis: triangle #D55
+    color: rgb(50, 145, 58);
+    font-weight: bolder
 }
+
 header {
     background-image: url('./robin-stickel-82145-unsplash.jpg');
     background-repeat: none;
@@ -43,68 +92,61 @@ header {
     background-size: cover;
     text-align: center;
     color: white;
+}
 
-  }
-  .header-pre{
-      -webkit-transition: all 2s ease;  
-      -moz-transition: all 2s ease;  
-      -o-transition: all 2s ease;  
-      -ms-transition: all 2s ease;  
-      transition: all 2s ease;
-      height: auto
-  }
-  .intro-text {
+.header-pre {
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    -ms-transition: all 2s ease;
+    transition: all 2s ease;
+    height: auto
+}
+
+.intro-text {
     padding-top: 190px;
     padding-bottom: 300px;
     text-align: center;
-  }
-  
-  .intro-lead-in {
+}
+
+.intro-lead-in {
     font-family: "Droid Serif", "Helvetica Neue", sans-serif;
     font-style: italic;
     font-size: 100px;
     line-height: 40px;
     margin-bottom: 25px;
     text-align: center;
-  }
-  .intro-heading {
-      font-size: 40px;
-  }
-  .searchCuisines{
-      text-align: center;
-      margin-left: 35%;
-      margin-top: 50px
-  }
+}
 
-  .cuisines-container {
+.intro-heading {
+    font-size: 40px;
+}
 
-    background-repeat: none;
-    background-position: center center;
-    background-size: cover;
-    text-align: center;
-  }
 @media only screen and (max-width: 600px) {
     .cuisine {
         width: 100%;
-        }
+    }
 }
-.restaurants{
+
+.restaurants {
     border: 1px solid black;
     margin-bottom: 20px;
     display: inline-block;
     margin-right: 20px;
     border-radius: 25px;
     width: 50%;
-
 }
+
 img {
     zoom: 100%;
-  }
-.res-h1{
-    color: white;
-    padding-bottom:150px;
 }
-.transform-active{
+
+.res-h1 {
+    color: white;
+    padding-bottom: 150px;
+}
+
+.transform-active {
     height: 50px;
 }
 
@@ -112,12 +154,15 @@ img {
     0% {
         background-color: rgb(54, 128, 54);
     }
+
     33% {
         background-color: rgb(204, 17, 17);
     }
+
     66% {
         background-color: rgb(43, 43, 209);
     }
+
     100% {
         background-color: rgb(156, 97, 204);
     }
