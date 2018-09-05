@@ -18,6 +18,10 @@ class renderer {
         let newHTML = template({restaurants});
         this.$cuisines.append(newHTML);
     }
+    noCityError() {
+        this.$cuisines.empty();
+        this.$cuisines.append("<h2> We currently do not have restaurants for this city, please try again")
+    }
 
 }
 
