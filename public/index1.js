@@ -42,6 +42,13 @@ function getNewUser(){
        }
    })
 }
+$('.userName').keypress(function (e) {
+    var key = e.which;
+    if(key == 13)  {
+        $('.addName').click();
+        return false;  
+    }
+});  
    
 
 
