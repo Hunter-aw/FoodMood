@@ -28,5 +28,12 @@ class AjaxRequester {
         })
         .catch((err)=> {throw err})
     }
+    searchCuisine(){
+        return $.ajax({
+            type:'GET',
+            url:'test'
+        })
+        .catch((err)=>{throw err})
+    }
 }
 export default AjaxRequester

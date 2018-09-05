@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 
 var Restaurants = require('./models/restModel');
+let Cuisine = require('./models/cusines');
 const router = express.Router()
 
 router.post('/recommendations', (req, res) => {
@@ -14,5 +15,11 @@ router.post('/recommendations', (req, res) => {
     newRecs.save()
     console.log(newRecs.recArray)
     res.send(newRecs.recArray)
+})
+
+router.get('/test',(req,res)=>{
+    Cuisine.findOne({cuisine_name:"Afghani"},function(err,data){
+        res.send(data);
+})
 })
 module.exports = router;

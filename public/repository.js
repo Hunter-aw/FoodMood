@@ -31,6 +31,11 @@ class host{
             this.restaurants.push(array[x]);
         }
     }
+    searchCuisine(){
+        this.ajax.searchCuisine().then((data)=>{
+            console.log(data.cuisine_id);
+        })
+    }
     getRestauantRecs() {
         return this.ajax.searchRestaurants(this.cityId, this.cuisineId)
         .then((data) => {
