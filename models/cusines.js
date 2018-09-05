@@ -6,6 +6,7 @@ let cuisineSchema = new mongoose.Schema({
 });
 
 
+
 let Cuisine = mongoose.model('cuisine',cuisineSchema);
 
 module.exports = Cuisine
