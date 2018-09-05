@@ -24,7 +24,12 @@ class eventsHandler {
             }
         });
     }
-
+    searchCuisines(){
+        $('#addCuisine').on('click',(()=>{
+        let cuisineName = $('.cuisineName').val()
+            this.repository.searchCuisine(cuisineName);
+        }))
+    }
     chooseCuisine() {
         $('.cuisines').on('click', '.cuisine', () => {
             let cuisineId = $('.cuisine').data().id;

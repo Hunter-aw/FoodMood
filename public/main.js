@@ -10,6 +10,8 @@ const eventHandler = new eventsHandler(repository,render);
 
 eventHandler.showCuisinesforCity()
 eventHandler.chooseCuisine()
+eventHandler.searchCuisines()
+
 
 $("#addCity").click(function() {
     $('.header-pre').toggleClass('transform-active');
