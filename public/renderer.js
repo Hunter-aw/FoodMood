@@ -3,6 +3,7 @@ class renderer {
         this.$cuisines = $(".cuisines");
         this.$cuisinesTemplate = $('#cuisines-template').html();
         this.$restTemplate = $('#rest-template').html();
+        this.$hostLoadingPage = $('#host-loading-template').html();
     }
     rendercuisines(array){
         this.$cuisines.empty();
@@ -16,6 +17,14 @@ class renderer {
         this.$cuisines.empty();
         let template = Handlebars.compile(this.$restTemplate);
         let newHTML = template({restaurants});
+        this.$cuisines.append(newHTML);
+    }
+    hostLoadingPage() {
+        this.$cuisines.empty();
+        let cuisineObj = {}
+        let template = Handlebars.compile(this.$hostLoadingPage);
+        let newHTML = template(cuisineObj);
+        console.log(newHTML);
         this.$cuisines.append(newHTML);
     }
     noCityError() {

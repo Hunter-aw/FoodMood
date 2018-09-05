@@ -49,6 +49,7 @@
         <div class="se-pre-con"></div>
         <div class="row cuisines text-center align-center">
         </div>
+
     </div>
 
     <script id="cuisines-template" type="text/x-handlebars-template">
@@ -84,6 +85,13 @@
             </div>
         </div>
         {{/each}}
+    </script>
+    <script id="host-loading-template" type="text/x-handlebars-template">
+        <div id=invite-your-friends" class="col-md-6 offset-md-2">
+            <h2 class="chooseCuisine">Send 5 of your friends the link below!</h2>
+            <h3><a href="localhost:8080/test">localhost:8080/test</a></h3>
+            <button class="btn btn-primary voteNow">Vote Now!</button>
+        </div>
     </script>
     <script src="jquery/dist/jquery.js"></script>
     <script src="/socket.io/socket.io.js"></script>
