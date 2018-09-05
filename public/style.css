@@ -3,7 +3,6 @@ body {
 }
 .row{
     width: 80%;
-    margin-right: 10%;
     float: right;
 }
 .cuisines{
@@ -14,19 +13,28 @@ body {
 
 }
 .cuisine{
-    width: 30%;
-    margin-right:5%;
     margin-left: 5%;
     display: inline-block;
     border: 1px solid white;
     background-color: rgb(93, 136, 102);
     color: white;
     border-radius: 5px;
-    height: 100px;
+    height: 200px;
+    width: 200px;
     margin-bottom: 40px;
     vertical-align: middle;
     width: 60%;
     padding-bottom: 10px;
+    animation: multicolor 6s ease infinite alternate none;
+}
+.chosen-city{
+    display: none
+}
+.city-text{
+    padding: 0;
+    font-size: 40px;
+    color: black;
+    text-emphasis: triangle #D55
 }
 header {
     background-image: url('./robin-stickel-82145-unsplash.jpg');
@@ -35,6 +43,15 @@ header {
     background-size: cover;
     text-align: center;
     color: white;
+
+  }
+  .header-pre{
+      -webkit-transition: all 2s ease;  
+      -moz-transition: all 2s ease;  
+      -o-transition: all 2s ease;  
+      -ms-transition: all 2s ease;  
+      transition: all 2s ease;
+      height: auto
   }
   .intro-text {
     padding-top: 190px;
@@ -86,4 +103,22 @@ img {
 .res-h1{
     color: white;
     padding-bottom:150px;
+}
+.transform-active{
+    height: 50px;
+}
+
+@keyframes multicolor {
+    0% {
+        background-color: rgb(54, 128, 54);
+    }
+    33% {
+        background-color: rgb(204, 17, 17);
+    }
+    66% {
+        background-color: rgb(43, 43, 209);
+    }
+    100% {
+        background-color: rgb(156, 97, 204);
+    }
 }

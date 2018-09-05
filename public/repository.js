@@ -14,6 +14,7 @@ class host{
         this.ajax.getCityId(city)
         .then((data) => {
             this.cityId = data.location_suggestions[0].id
+
         })
     }
     addCuisines(array){

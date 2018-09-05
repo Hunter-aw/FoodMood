@@ -19,7 +19,7 @@
             <button type="button" class="btn btn-dark navbar-btn text-left">Sign in</button>
         </div>
     </nav>
-    <header>
+    <header class ="header-pre">
         <div class="container">
             <div class="intro-text">
                 <div class="intro-lead-in">Food Mood</div>
@@ -31,16 +31,22 @@
                     </form>
                 </div>
             </div>
+            <div class="chosen-city">
+                <h4 class="city-text"></h4>
+            </div>
         </div>
     </header>
-    <div class="container cuisines-container">
-        <div class="row">
-            <div class="col-12 text-center cuisines">
+    <div class="container cuisines-container ">
+        <div class="row cuisines text-center">
+            <form class="input-group-prepend cuisine-form" type="form">
+                    <input type="text" class="cuisineName form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                    <button id= "addCuisine" class="btn btn-primary" type="button">Add Cuisine</button>
+            </form>
         </div>
     </div>
 
     <script id="cuisines-template" type="text/x-handlebars-template">
-        <div class="cuisine" data-id ={{id}}>
+        <div class="cuisine col-md-5" data-id ={{id}}>
             <h4>{{cuisine_name}}</h4>
         </div>
     </script>
