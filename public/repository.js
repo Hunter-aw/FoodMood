@@ -32,7 +32,7 @@ class host{
         }
     }
     searchCuisine(name){
-        this.ajax.fetchCuisineByName(name).then((data)=>{
+        return this.ajax.fetchCuisineByName(name).then((data)=>{
            this.cuisineId =(data.cuisine_id);
         })
     }

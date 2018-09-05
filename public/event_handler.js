@@ -25,26 +25,32 @@ class eventsHandler {
             }
         });
     }
+    getRestaurantsbyCuisine() {
+        this.repository.getRestauantRecs()
+        .then((data) => {
+            this.repository.addRestaurants(data);
+            console.log(this.repository.restaurants)
+            this.render.renderRestRecs(this.repository.restaurants);
+        })
+    }
+
     searchCuisines(){
-        $('#addCuisine').on('click',(()=>{
+        $('.cuisines').on('click', '#addCuisine', (()=>{
         let cuisineName = $('.cuisineName').val()
-            this.repository.searchCuisine(cuisineName);
+        this.repository.searchCuisine(cuisineName)
+        .then(() => this.getRestaurantsbyCuisine())
         }))
     }
+
     chooseCuisine() {
         $('.cuisines').on('click', '.cuisine', (event) => {
             let cuisineId = $(event.currentTarget).data().id;
             console.log(this)
             this.repository.addCuisineId(cuisineId);
-            this.repository.getRestauantRecs()
-            .then((data) => {
-                this.repository.addRestaurants(data);
-                console.log(this.repository.restaurants)
-                this.render.renderRestRecs(this.repository.restaurants);
+            this.getRestaurantsbyCuisine()
             })
-        })
-    }
-  
+        }
+ 
 
 }
 export default eventsHandler;
