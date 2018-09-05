@@ -20,6 +20,7 @@ class eventsHandler {
                 this.repository.addCuisines(this.array);
                 this.render.rendercuisines(this.repository.cuisines)
                 this.repository.addCity(city)
+                $('.city-text').append(`City: ${city}`)
             }
         });
     }
