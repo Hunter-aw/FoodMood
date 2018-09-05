@@ -62,12 +62,15 @@
             {{else}}
         <div class = "restaurants col-sm-5" data-id ={{id}} 
             style="background-image: url(https://thumbs.dreamstime.com/b/restaurant-flat-icon-vector-illustration-plate-fork-knife-orange-square-background-diagonal-shadow-52009796.jpg); 
-                background-size: cover;">
+                background-size: cover; opacity: 0.8;">
             {{/if}}
-            <h1 class="res-h1">{{name}}</h1>
-            <h4>avg price(2) - {{averageCostForTwo}}</h4>
-            <h4>rating: {{userRating}}</h4>
-        
+
+                <h1 class="res-h1">{{name}}</h1>
+                <div class="space-waster"></div>
+            <div class = "rest-info">       
+                <h4>avg price(2) - {{averageCostForTwo}}</h4>
+                <h4>rating: {{userRating}}</h4>
+            </div>
         </div>
         {{/each}}
     </script>

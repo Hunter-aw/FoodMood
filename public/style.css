@@ -143,7 +143,14 @@ img {
 
 .res-h1 {
     color: white;
-    padding-bottom: 150px;
+    background: rgba(52, 58, 64, 0.5);
+}
+.space-waster{
+    padding-bottom: 150px
+}
+.rest-info {
+    color: white;
+    background: rgba(52, 58, 64, 0.5);
 }
 
 .transform-active {
