@@ -17,6 +17,5 @@ $("#addCity").click(function() {
     $('.header-pre').toggleClass('transform-active');
     $('.intro-text').toggle()
     $('.chosen-city').toggle()
-    $('.cuisine-form').toggle()
   });
 

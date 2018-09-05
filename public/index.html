@@ -38,16 +38,17 @@
     </header>
     <div class="container cuisines-container ">
         <div class="row cuisines text-center align-center">
-            <form class="input-group-prepend cuisine-form" type="form">
-                    <input type="text" class="cuisineName form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
-                    <button id= "addCuisine" class="btn btn-primary" type="button">Add Cuisine</button>
-            </form>
         </div>
     </div>
 
     <script id="cuisines-template" type="text/x-handlebars-template">
-        <div class = row >    
-            <h2 class="col-md-12 chooseCuisine">Choose a Cuisine Below</h2>
+        <div class = row >
+            <h2 class="col-md-12 chooseCuisine">Type in your Cuisine of Choice</h2>
+            <form class="col-md-6 offset-md-4 input-group-prepend cuisine-form" type="form">
+                    <input type="text" class="cuisineName form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                    <button id= "addCuisine" class="btn btn-primary" type="button">Add Cuisine</button>
+            </form>    
+            <h2 class="col-md-12 chooseCuisine">Or choose a Cuisine Below</h2>
         </div>
         {{#each cuisines}}
         <div class="cuisine col-md-5" data-id ={{id}}>
