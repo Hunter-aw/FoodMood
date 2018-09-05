@@ -8,7 +8,7 @@ class host{
         this.city = ""
         this.cityId;
         this.cuisineId;
-        this.restArrayId =0
+        this.restArrayId = 0;
     }
     addCity(city){
         this.city = city

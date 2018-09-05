@@ -11,7 +11,7 @@ mongoose.connect(process.env.CONNECTION_STRING || 'mongodb://localhost/foodmoood
 })
 app.get('/test',function(req,res){
   if(array.length >= 10){
-    res.sendfile('error.html');
+    res.sendfile('public2/error.html');
   }else
   res.sendfile('public2/users.html');
 })
