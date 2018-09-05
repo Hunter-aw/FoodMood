@@ -12,10 +12,10 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
     <script>
-	$(window).load(function() {
-		// Animate loader off screen
-		$(".se-pre-con").fadeOut("slow");;
-	});
+        $(window).load(function () {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");;
+        });
     </script>
 </head>
 
@@ -28,7 +28,7 @@
             <button type="button" class="btn btn-dark navbar-btn text-left">Sign in</button>
         </div>
     </nav>
-    <header class ="header-pre">
+    <header class="header-pre">
         <div class="container">
             <div class="intro-text">
                 <div class="intro-lead-in">Food Mood</div>
@@ -36,7 +36,7 @@
                 <div class="row input-group searchCuisines align-items-center">
                     <form class="input-group-prepend col-md-4 offset-md-2" type="form">
                         <input type="text" class="cityName form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
-                        <button id= "addCity" class="btn btn-primary" type="button">Add City</button>
+                        <button id="addCity" class="btn btn-primary" type="button">Add City</button>
                     </form>
                 </div>
             </div>
@@ -87,17 +87,24 @@
         {{/each}}
     </script>
     <script id="host-loading-template" type="text/x-handlebars-template">
-        <div id=invite-your-friends" class="col-md-6 offset-md-2">
+        <div id="invite-your-friends" class="col-md-6 offset-md-2">
             <h2 class="chooseCuisine">Send 5 of your friends the link below!</h2>
             <h3><a href="localhost:8080/test" target="_blank">localhost:8080/test</a></h3>
             <button class="btn btn-primary voteNow">Vote Now!</button>
         </div>
     </script>
+    <div class="row">
+        <div class="names col-sm-12">
+        
+    </div>
+    </div>
+
+
     <script src="jquery/dist/jquery.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="handlebars/dist/handlebars.js"></script>
     <script src="main.js" type="module"></script>
-    
+
 </body>
 
 </html>
