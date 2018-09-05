@@ -7,7 +7,8 @@ class eventsHandler {
         this.array =  [
         {id:25,cuisine_name: "Chinese"},
         {id:73,cuisine_name: "Mexican"},
-        {id:55,cuisine_name: "Italian"}
+        {id:55,cuisine_name: "Italian"},
+        {id:959, cuisine_name: "Donuts"}
       ]
     }
     showCuisinesforCity() {
@@ -31,8 +32,9 @@ class eventsHandler {
         }))
     }
     chooseCuisine() {
-        $('.cuisines').on('click', '.cuisine', () => {
-            let cuisineId = $('.cuisine').data().id;
+        $('.cuisines').on('click', '.cuisine', (event) => {
+            let cuisineId = $(event.currentTarget).data().id;
+            console.log(this)
             this.repository.addCuisineId(cuisineId);
             this.repository.getRestauantRecs()
             .then((data) => {

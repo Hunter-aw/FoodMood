@@ -37,7 +37,7 @@
         </div>
     </header>
     <div class="container cuisines-container ">
-        <div class="row cuisines text-center">
+        <div class="row cuisines text-center align-center">
             <form class="input-group-prepend cuisine-form" type="form">
                     <input type="text" class="cuisineName form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
                     <button id= "addCuisine" class="btn btn-primary" type="button">Add Cuisine</button>
@@ -46,19 +46,31 @@
     </div>
 
     <script id="cuisines-template" type="text/x-handlebars-template">
-        <div class="cuisine col-md-5" data-id ={{id}}>
-            <h4>{{cuisine_name}}</h4>
+        <div class = row >    
+            <h2 class="col-md-12 chooseCuisine">Choose a Cuisine Below</h2>
         </div>
+        {{#each cuisines}}
+        <div class="cuisine col-md-5" data-id ={{id}}>
+            <h4 class="cuisineNameDisplay">{{cuisine_name}}</h4>
+        </div>
+        {{/each}}
     </script>
     <script id="rest-template" type="text/x-handlebars-template">
-
         {{#each restaurants}}
-        <div class = "restaurants col-sm-5" data-id ={{id}} style="background-image: url({{image}});zoom: 100%;">
-            <h1 class="res-h1">{{name}}</h1>
-            <!-- <img src="{{image}}"style="max-width","100px"> -->
-            <p>avg price(2) - {{averageCostForTwo}}</p>
-            <p>rating: {{userRating}}</p>
-        
+            {{#if image}}
+        <div class = "restaurants col-sm-5" data-id ={{id}} style="background-image: url({{image}}); background-size: cover;">
+            {{else}}
+        <div class = "restaurants col-sm-5" data-id ={{id}} 
+            style="background-image: url(https://thumbs.dreamstime.com/b/restaurant-flat-icon-vector-illustration-plate-fork-knife-orange-square-background-diagonal-shadow-52009796.jpg); 
+                background-size: cover; opacity: 0.8;">
+            {{/if}}
+
+                <h1 class="res-h1">{{name}}</h1>
+                <div class="space-waster"></div>
+            <div class = "rest-info">       
+                <h4>avg price(2) - {{averageCostForTwo}}</h4>
+                <h4>rating: {{userRating}}</h4>
+            </div>
         </div>
         {{/each}}
     </script>

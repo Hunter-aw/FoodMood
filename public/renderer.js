@@ -6,18 +6,21 @@ class renderer {
     }
     rendercuisines(array){
         this.$cuisines.empty();
+        let cuisineObj = {cuisines:array}
         let template = Handlebars.compile(this.$cuisinesTemplate);
-        for (let x in array) {
-          let newHTML = template(array[x]);
-          console.log(newHTML);
-          this.$cuisines.append(newHTML);
-        }
+        let newHTML = template(cuisineObj);
+        console.log(newHTML);
+        this.$cuisines.append(newHTML);
     }
     renderRestRecs(restaurants) {
         this.$cuisines.empty();
         let template = Handlebars.compile(this.$restTemplate);
         let newHTML = template({restaurants});
         this.$cuisines.append(newHTML);
+    }
+    noCityError() {
+        this.$cuisines.empty();
+        this.$cuisines.append("<h2> We currently do not have restaurants for this city, please try again")
     }
 
 }
