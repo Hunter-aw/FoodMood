@@ -14,7 +14,7 @@ body{
     /* background: #e00; */
     border-radius: 10px;
     position: relative;
-
+    animation: nameEnlarge 6s ease infinite alternate backwards;
   }
   .alert{
       font-size: 25px;
@@ -41,8 +41,7 @@ body{
     background: rgba(52, 58, 64, 0.5);
 }
 .intro-text {
-    padding-top: 190px;
-    padding-bottom: 300px;
+    padding-top: 100px;
     text-align: center;
 }
 
@@ -76,4 +75,9 @@ body{
         background-color: rgb(156, 97, 204);
     }
 }
+@keyframes nameEnlarge {
+    from {font-size: 20px}
+    to {font-size: 100px; transform: rotate(360deg);}
+}
+
 
