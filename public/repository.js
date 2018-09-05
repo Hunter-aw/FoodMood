@@ -8,6 +8,7 @@ class host{
         this.city = ""
         this.cityId;
         this.cuisineId;
+        this.restArrayId =0
     }
     addCity(city){
         this.city = city
@@ -41,13 +42,17 @@ class host{
         .then((data) => {
             let restData = new RestRecs(data)
             restData.createRestArray()
-            this.ajax.addRestaurantsToDB(restData.restArray);
+            this.ajax.addRestaurantsToDB(restData.restArray)
+            .then((data)=>{
+                this.restArrayId = data._id
+            })
             return restData.restArray
         })
     }
-    refreshPage() {
-        this.ajax.refreshAjaxPage()
-    }
+    // refreshPage() {
+    //     this.ajax.refreshAjaxPage()
+    // } 
+    // IN PROGRESS
 }
 
 export default host
