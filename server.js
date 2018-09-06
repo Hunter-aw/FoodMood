@@ -41,10 +41,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use('/', api);
 
-
-
-
-
 app.get('/kill', function (req, res) {
   array.forEach(function (socket) {
     socket.destroy();
