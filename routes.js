@@ -8,15 +8,16 @@ const router = express.Router()
 
 router.post('/recommendations', (req, res) => {
     console.log(req.body.restaurantData)
-    let newRecs = new Restaurants({
-        recArray: []
-    });
-    newRecs.recArray.push(JSON.parse(req.body.restaurantData))
-    Restaurants.remove().exec();
-    console.log(newRecs);
-    newRecs.save()
-    console.log(newRecs.recArray)
-    res.send(newRecs)
+    Restaurants.remove().exec()
+    for (entry of JSON.parse(req.body.restaurantData)){
+        console.log(entry)
+        let newRecs = new Restaurants({
+            recArray: entry
+        })
+        newRecs.save();
+    }
+    // newRecs.recArray.push(JSON.parse(req.body.restaurantData))
+    res.send(Restaurants.find({}))
 })
 
 router.get('/test/:cuisine',(req,res)=>{
@@ -43,6 +44,8 @@ router.get('/voted/:id',function(req,res){
        }
 })
 })
+
+
 
 
 

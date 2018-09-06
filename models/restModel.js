@@ -12,7 +12,7 @@ var mongoose = require('mongoose');
 
 
 let restRecSchema = new mongoose.Schema({
-    recArray: []
+    recArray: Object
 });
 
 let Restaurants = mongoose.model('restaurant', restRecSchema)
