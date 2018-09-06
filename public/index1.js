@@ -1,5 +1,5 @@
 import ajaxReq from './ajax_User.js';
-var socket = io.connect('http://localhost:8080');
+// var socket = io.connect('http://localhost:8080');
 var compile = $('#rest-template');
 
 socket.on('newUser',newUser);
