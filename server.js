@@ -17,8 +17,7 @@ app.get('/test',function(req,res){
 })
 var array = [];
 if(array.length > 10){
-  console.log("sorry cant hold more users");
-  array.length = 0;
+  process.exit();
 }else{
 io.sockets.on('connection', newConnection);
 function newConnection(socket){
