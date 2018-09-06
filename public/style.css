@@ -194,6 +194,21 @@ img {
 	z-index: 9999;
     background: url(https://cdn.dribbble.com/users/655390/screenshots/2186909/loader-for-dribble.gif) center no-repeat #fff;
 }
+.winnerData{
+    height: 400px;
+    color: white; 
+    padding: 100px;
+}
+.fancy {
+    animation:  multicolor 2s ease infinite alternate backwards;
+    background-position: center center;
+    background-size: cover;
+    text-align: center;
+    padding-right: 200px;
+    position: relative;
+    padding-left: 50px;
+
+  }
 
 @keyframes multicolor {
     0% {

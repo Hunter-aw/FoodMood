@@ -74,7 +74,11 @@ class eventsHandler {
     getWinRestaurant(){
         $('#finish').on('click',(()=>{
             if(this.repository.voted){
-               this.repository.seeResults();
+               this.repository.seeResults()
+               .then((data)=>{
+                   console.log(data)
+                    this.render.rederResults(data)
+               })
             }else{
                 alert("please vote!!");
             }

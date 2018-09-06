@@ -95,6 +95,18 @@
             <button class="btn btn-primary voteNow">Vote Now!</button>
         </div>
     </script>
+    <script id = "winner-template" type="text/x-handlebars-template">
+        <div class = fancy>
+            <h1 class = "col-md-9 offset-md-3 rest-info">WINNER!</h1>
+        <div class="winnerData col-md-9 offset-md-3 align-bottom fancy" style="background-image:url({{image}}); background-size: cover">
+            <h2 class = "rest-info">{{name}}</h2>
+            <h4 class = "rest-info">{{address}}</h4>
+            <h4 class = "rest-info">Number of Votes: {{votes}}</h4>
+            <h4 class = "rest-info" style = "font-weight: bold"><a href={{menuUrl}}>Menu</a></h4>
+        </div>
+            <h2 class = "col-md-9 offset-md-3 rest-info">Thanks for playing, Enjoy your meal!</h2>
+        </div>
+    </script>
     <div class="row">
         <div class="names col-sm-12">
         

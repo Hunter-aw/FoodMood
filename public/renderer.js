@@ -4,6 +4,7 @@ class renderer {
         this.$cuisinesTemplate = $('#cuisines-template').html();
         this.$restTemplate = $('#rest-template').html();
         this.$hostLoadingPage = $('#host-loading-template').html();
+        this.$winnerTemplate = $('#winner-template').html();
     }
     rendercuisines(array){
         this.$cuisines.empty();
@@ -30,6 +31,12 @@ class renderer {
     noCityError() {
         this.$cuisines.empty();
         this.$cuisines.append("<h2> We currently do not have restaurants for this city, please try again")
+    }
+    rederResults(winnerData) {
+        this.$cuisines.empty();
+        let template = Handlebars.compile(this.$winnerTemplate);
+        let newHTML = template(winnerData);
+        this.$cuisines.append(newHTML)
     }
 
 }
