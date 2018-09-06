@@ -2,9 +2,9 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
-const server = app.listen(8080);
+const server = require('http').createServer(app);
 const socket = require('socket.io');
-const io = socket.listen(server);
+const io = socket(server);
 const api = require('./routes');
 mongoose.connect(process.env.CONNECTION_STRING || 'mongodb://localhost/foodmoood', function() {
   console.log("DB connection established!!!");
