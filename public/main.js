@@ -53,10 +53,6 @@ function newUser(name){
           });
       });   
 }
-
-function newGame() {
-    $('#newGame').on('click', (()=>{
+$('#newGame').click((()=>{
         socket.disconnect()
     }))
-}
-newGame()
