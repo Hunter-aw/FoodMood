@@ -19,7 +19,12 @@ class AjaxRequester {
         })
         .catch((err)=> {throw err})
     }
-
+    voteForRestaurant(id){
+        return $.ajax({
+            type:'POST',
+            url:'voted/id'
+        })
+    }
     addRestaurantsToDB(restaurantData) {
         return $.ajax ({
             type: 'POST',
