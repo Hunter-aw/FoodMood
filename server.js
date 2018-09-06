@@ -15,19 +15,19 @@ app.get('/test',function(req,res){
   }else
   res.sendfile('public2/users.html');
 })
-var array = [];
-if(array.length > 10){
-  console.log("sorry cant hold more users");
-}else{
-io.sockets.on('connection', newConnection);
-function newConnection(socket){
-  socket.on('getNewUser',newUser);
-  function newUser(name){
-    array.push(name);
-    console.log(array);
-    io.sockets.emit('newUser',array)}
-}
-}
+// var array = [];
+// if(array.length > 10){
+//   console.log("sorry cant hold more users");
+// }else{
+// io.sockets.on('connection', newConnection);
+// function newConnection(socket){
+//   socket.on('getNewUser',newUser);
+//   function newUser(name){
+//     array.push(name);
+//     console.log(array);
+//     io.sockets.emit('newUser',array)}
+// }
+// }
 
 
 app.use(express.static('public'));
