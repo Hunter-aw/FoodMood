@@ -2,7 +2,7 @@ import host from './repository.js';
 import renderer from './renderer.js';
 import eventsHandler from './event_handler.js';
 import AjaxRequester from './ajax_requester.js';
-var socket = io.connect(process.env.PORT || '8080');
+var socket = io.connect('https://food-moood.herokuapp.com');
 const render = new renderer();
 const ajaxRequester = new AjaxRequester();
 const repository = new host(ajaxRequester);
