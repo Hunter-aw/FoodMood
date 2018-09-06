@@ -24,14 +24,20 @@ body{
   .restaurants {
     /* border: 1px solid black; */
     margin-bottom: 20px;
+    margin-top: 10px;
     display: inline-block;
     margin-right: 20px;
     border-radius: 25px;
-    width: 50%;
+    width: 100%;
+    transition: all 2s ease;
   }
+  .restaurants:hover {
+    width: 105%
+}
   .res-h1 {
     color: white;
     background: rgba(52, 58, 64, 0.5);
+    height:100px
 }
 .space-waster{
     padding-bottom: 150px
