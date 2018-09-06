@@ -7,7 +7,7 @@ class Restaurant {
         this.ratingColor = singleRestData.user_rating.rating_color 
         this.image = singleRestData.featured_image
         this.menuUrl = singleRestData.menu_url
-        this.id = singleRestData.id
+        this._id = singleRestData.id
         this.currency = singleRestData.currency
         this.votes = 0;
     }

@@ -14,7 +14,8 @@ function renderRestRecs(restaurants) {
 function newUser(name){
     if(name.length > 5){
         ajaxReq.getRestaurants().then((data)=>{
-           var array = data.recArray[0];
+            console.log(data)
+           var array = data;
             renderRestRecs({restaurants:array});
         })
     }else{
