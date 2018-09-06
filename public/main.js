@@ -2,8 +2,7 @@ import host from './repository.js';
 import renderer from './renderer.js';
 import eventsHandler from './event_handler.js';
 import AjaxRequester from './ajax_requester.js';
-var sessionId=Math.floor(Math.random()*1000)
-var socket = io('https://food-mood.herokuapp.com/', {forceNew: True});
+var socket = io.connect('https://food-moood.herokuapp.com');
 const render = new renderer();
 const ajaxRequester = new AjaxRequester();
 const repository = new host(ajaxRequester);
@@ -49,6 +48,5 @@ function newUser(name){
             left: Math.random() * ($('.names').width() - $(this).width()),
             top: Math.random() * ($('.names').height() - $(this).height())
           });
-      });
-    
+      });   
 }
