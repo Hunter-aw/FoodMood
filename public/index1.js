@@ -1,5 +1,5 @@
 import ajaxReq from './ajax_User.js';
-var socket = io.connect('https://food-moood.herokuapp.com');
+var socket = io.connect('https://food-moood.herokuapp.com/');
 var compile = $('#rest-template');
 
 socket.on('newUser',newUser);

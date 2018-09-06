@@ -2,7 +2,8 @@ import host from './repository.js';
 import renderer from './renderer.js';
 import eventsHandler from './event_handler.js';
 import AjaxRequester from './ajax_requester.js';
-var socket = io.connect('https://food-moood.herokuapp.com', { forceNew: true });
+var sessionId=Math.floor(Math.random()*1000)
+var socket = io('https://food-mood.herokuapp.com/'+sessionId, {forceNew: True});
 const render = new renderer();
 const ajaxRequester = new AjaxRequester();
 const repository = new host(ajaxRequester);
