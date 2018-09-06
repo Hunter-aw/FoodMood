@@ -39,6 +39,7 @@ $('.cuisines').on('keypress', '.cuisineName', function (e) {
 });     
 socket.on('newUser',newUser);
 function newUser(name){
+    console.log(name)
     $('.names').empty();
     for (let x in name) {
         $('.names').append('<h1 class="name col-sm-12">'+name[x]+'</h1>'); 
