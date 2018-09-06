@@ -25,14 +25,14 @@
             </div>
             </div>
             <div class="container">
-                  <div class="row restaurants text-center align-center">
+                  <div id="restau" class="row restaurants text-center align-center">
                     </div>
                   <div class="namesArea"></div>
     </div>
     <script id="rest-template" type="text/x-handlebars-template">
         {{#each restaurants}}
             {{#if image}}
-        <div class = "restaurants col-sm-5" data-id ={{_id}} style="background-image: url({{image}}); background-size: cover;">
+        <div id="restaurant" class = "restaurants col-sm-5" data-id ={{_id}} style="background-image: url({{image}}); background-size: cover;">
             {{else}}
         <div class = "restaurants col-sm-5" data-id ={{_id}} 
             style="background-image: url(https://thumbs.dreamstime.com/b/restaurant-flat-icon-vector-illustration-plate-fork-knife-orange-square-background-diagonal-shadow-52009796.jpg); 

@@ -1,6 +1,7 @@
 import ajaxReq from './ajax_User.js';
 var socket = io.connect('https://food-moood.herokuapp.com');
 var compile = $('#rest-template');
+var voted = false;
 
 socket.on('newUser',newUser);
 
@@ -11,6 +12,13 @@ function renderRestRecs(restaurants) {
     console.log(newHTML)
     $('.restaurants').append(newHTML);
 }
+function voteForRestaurant(id){
+    return $.ajax({
+        type:'GET',
+        url:'voted/'+id
+    }).catch((err)=>{console.log(err)})
+}
+
 function newUser(name){
     if(name.length > 5){
         ajaxReq.getRestaurants().then((data)=>{
@@ -50,6 +58,15 @@ $('.userName').keypress(function (e) {
         return false;  
     }
 });  
+    $('#restau').on('click','#restaurant',((event)=>{
+       if(voted){
+           alert("cant vote twice");
+       } else{
+        let restaurantId = $(event.currentTarget).data().id;
+           voted = true;
+           voteForRestaurant(restaurantId);
+       }
+    }))
    
 
 
@@ -57,3 +74,4 @@ $('.userName').keypress(function (e) {
 
 getNewUser();
 newUser();
+voteRestaurant();

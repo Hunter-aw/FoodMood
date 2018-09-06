@@ -50,6 +50,24 @@ class host{
             return restData.restArray
         })
     }
+    voteForRestaurant(id){
+        return this.ajax.voteForRestaurant(id)
+    }
+    seeResults(){
+        this.ajax.getResults().then((data)=>{
+            // let array = [];
+            // for(let x in data){
+            //     if(array.length = 0){
+            //         array.push(data[x]);
+            //     }
+            //     else if(array[0].recArray.votes < data[x].recArray.votes){
+            //         array.splice(0,1);
+            //         array.push(data[x]);
+            //     }
+            // }
+            console.log(data.recArray);
+        })
+    }
     // refreshPage() {
     //     this.ajax.refreshAjaxPage()
     // } 

@@ -64,9 +64,21 @@ class eventsHandler {
            } else{
             let restaurantId = $(event.currentTarget).data().id;
                this.repository.voted = true;
+               this.repository.voteForRestaurant(restaurantId).then(()=>{
+                   console.log("thanks for voting");
+               })
            }
         }))
 
+    }
+    getWinRestaurant(){
+        $('#finish').on('click',(()=>{
+            if(this.repository.voted){
+               this.repository.seeResults();
+            }else{
+                alert("please vote!!");
+            }
+        }))
     }
     searchAgain() {
         $('.cuisines').on('click', '.search-again', () => {

@@ -19,11 +19,17 @@ class AjaxRequester {
         })
         .catch((err)=> {throw err})
     }
+    getResults(){
+        return $.ajax({
+            type:'GET',
+            url:'results'
+        }).catch((err)=>{console.log(err)})
+    }
     voteForRestaurant(id){
         return $.ajax({
-            type:'POST',
-            url:'voted/id'
-        })
+            type:'GET',
+            url:'voted/'+id
+        }).catch((err)=>{console.log(err)})
     }
     addRestaurantsToDB(restaurantData) {
         return $.ajax ({
