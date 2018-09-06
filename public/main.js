@@ -37,8 +37,9 @@ $('.cuisines').on('keypress', '.cuisineName', function (e) {
         return false;  
     }
 });     
-socket.on('newUser',newUser);
+
 function newUser(name){
+    socket.on('newUser',newUser);
     console.log(name)
     $('.names').empty();
     for (let x in name) {
@@ -51,3 +52,10 @@ function newUser(name){
           });
       });   
 }
+
+function newGame() {
+    $('#newGame').on('click', (()=>{
+        socket.disconnect()
+    }))
+}
+newGame()

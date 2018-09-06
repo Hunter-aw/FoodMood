@@ -84,10 +84,6 @@ class eventsHandler {
             }
         }))
     }
-    searchAgain() {
-        $('.cuisines').on('click', '.search-again', () => {
-            this.repository.refreshPage()
-        })
-    } 
+
 }
 export default eventsHandler;
