@@ -37,14 +37,20 @@ router.get('/getRestaurants',function(req,res){
 })
 
 router.get('/voted/:id',function(req,res){
-    let id = req.param.id
-    Restaurants.update({id:id},{name: "guy"},function(err, response) {
+    let id = req.params.id
+    Restaurants.findOneAndUpdate({_id:id},{$inc:{"recArray.votes":1}},function(err, data) {
         if (err) {
         res.send(err);
        } else {
-        res.send(response);
+        res.send(data);
        }
 })
+})
+router.get('/results',function(req,res){
+    Restaurants.find(function(err,data){
+        if(err){res.send(err)}
+        else{res.send(data)}
+    })
 })
 
 

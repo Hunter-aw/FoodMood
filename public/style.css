@@ -156,6 +156,10 @@ header {
 .restaurants:hover {
     width: 105%
 }
+.finish{
+    background-color: green;
+    width: 200px;
+}
 
 img {
     zoom: 100%;

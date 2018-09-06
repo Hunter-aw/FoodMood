@@ -13,7 +13,7 @@ eventHandler.chooseCuisine()
 eventHandler.searchCuisines()
 eventHandler.hostRestaurantRender()
 eventHandler.voteRestaurant()
-
+eventHandler.getWinRestaurant();
 
 
 $("#addCity").click(function () {
