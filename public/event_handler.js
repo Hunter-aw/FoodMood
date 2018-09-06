@@ -57,6 +57,17 @@ class eventsHandler {
             this.render.renderRestRecs(this.repository.restaurants);
         })
     }
+    voteRestaurant(){
+        $('.cuisines').on('click','.restaurants',((event)=>{
+           if(this.repository.voted){
+               alert("cant vote twice");
+           } else{
+            let restaurantId = $(event.currentTarget).data().id;
+               this.repository.voted = true;
+           }
+        }))
+
+    }
     searchAgain() {
         $('.cuisines').on('click', '.search-again', () => {
             this.repository.refreshPage()

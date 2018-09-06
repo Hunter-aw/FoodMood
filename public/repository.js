@@ -9,6 +9,7 @@ class host{
         this.cityId;
         this.cuisineId;
         this.restArrayId = 0;
+        this.voted = false;
     }
     addCity(city){
         this.city = city

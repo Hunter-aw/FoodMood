@@ -12,6 +12,8 @@ eventHandler.showCuisinesforCity()
 eventHandler.chooseCuisine()
 eventHandler.searchCuisines()
 eventHandler.hostRestaurantRender()
+eventHandler.voteRestaurant()
+
 
 
 $("#addCity").click(function () {
@@ -20,12 +22,6 @@ $("#addCity").click(function () {
     $('.chosen-city').toggle()
 });
 
-// var input = document.getElementById("myInput");
-// input.addEventListener("keyup", function(event) {
-//   event.preventDefault();
-//   if (event.keyCode === 13) {
-//     document.getElementById("myBtn").click();
-//   }
 
 $('.cityName').keypress(function (e) {
     var key = e.which;

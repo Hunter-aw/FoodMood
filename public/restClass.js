@@ -9,6 +9,7 @@ class Restaurant {
         this.menuUrl = singleRestData.menu_url
         this.id = singleRestData.id
         this.currency = singleRestData.currency
+        this.votes = 0;
     }
 }
 
