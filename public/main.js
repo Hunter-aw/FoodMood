@@ -38,8 +38,9 @@ $('.cuisines').on('keypress', '.cuisineName', function (e) {
     }
 });     
 
+socket.on('newUser',newUser);
+
 function newUser(name){
-    socket.on('newUser',newUser);
     console.log(name)
     $('.names').empty();
     for (let x in name) {

@@ -3,7 +3,7 @@ var socket = io.connect('https://food-moood.herokuapp.com');
 var compile = $('#rest-template');
 var voted = false;
 
-// socket.on('newUser',newUser);
+socket.on('newUser',newUser);
 
 function renderRestRecs(restaurants) {
     $('.namesArea').empty();
@@ -43,7 +43,6 @@ function newUser(name){
 
 function getNewUser(){
    $('.addName').on('click',function(){
-    socket.on('newUser',newUser);
         let name = $('.userName').val();
        if(name.length < 2){
         $('.alert').css("display","block");
